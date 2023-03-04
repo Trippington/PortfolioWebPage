@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://kit.fontawesome.com/808397f9f6.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Personal Portfolio Website</title>
+  </head>
+  <body>
+    <nav id="navbar">
+    <ul id="nav-list">
+    <li><a href="#" class="dark-light" id="night-mode"><i class="fa-regular fa-moon"></i> Dark</a></li>
+        
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav>
+
+    <section id="welcome-section" class="welcome">
+      <h1 id="flicker">Hello, My name is Clarence Durham.</h1>
+      <p class="job-title">Full Stack Software Developer</p>
+      <p class="description">I am passionate about designing and implementing intuitive user interfaces and creating efficient and maintainable code. With a strong focus on problem-solving, I strive to deliver high-quality software solutions that exceed expectations.</p>
+      <a class="skills-button" href="#skills">Next <i class="fa-solid fa-arrow-down"></i></a>
+      
+       
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="skills-header">
+            <h2>Education</h2>
+            <ul class="bachelors">
+                <li><strong>Bachelor of Business Administration</strong> - Computer Information Systems</li>
+                <li>Tarleton State University December 2021</li>
+            </ul>
+            <ul class="masters">
+                <li><strong>Master of Science</strong> - Information Systems</li>
+                <li>Tarleton State University December 2023(expected)</li>
+            </ul>
+        </div>
+        <div class="left-column">
+            <h2>Languages/Skills</h2>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li><i class="fa-brands fa-python"></i> Python</li>
+              <li>SQL</li>
+              <li><i class="fa-brands fa-bootstrap"></i> Bootstrap</li>
+              <li><i class="fa-brands fa-linux"></i> Linux</li>
+            </ul>
+        </div>
+        
+        <div class="right-column">
+          <h2>Developer Tools</h2>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Visual Studio</li>
+            <li>Notepad ++</li>
+            <li>Git and GitHub</li>
+            <li>React</li>
+            <li>Chrome DevTools</li>
+            <li>MS SQL Server</li>
+          </ul>
+        </div>
+        <a class="projects-button" href="#projects">Next <i class="fa-solid fa-arrow-down"></i></a>
+      </section>
+      
+
+    <section id="projects" class="projects">
+      <h2>These are some of my projects</h2>
+      <div class="projects-grid">
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+        <a href=""><img src="https://wallpapers.com/images/file/alan-jackson-standing-against-wooden-wall-dmt6mmjmb3czrpd9.jpg" alt="alan jackson posing with his guitar" class="project-image"/>
+        <p class="project-tile">Tribute Page</p></a>
+      </div>
+      <a class="contact-button" href="#contact">Next <i class="fa-solid fa-arrow-down"></i></a>
+    </section>
+
+    <section id="contact" class="contact">
+      <div id="contact-header">
+        <h2 id="contact-h2">Let's Work Together...</h2>
+        <p id="contact-p">“Always remember that the future comes one day at a time.” -Dean Acheson</p>
+      </div>
+      <div class="contact-links">
+        <a href="Documents\Clarence Durham - Resume.pdf" id="profile-link" target="_blank"><i class="fa-solid fa-file"></i> Resume</a>
+        <a href="https://github.com/Trippington" id="profile-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/ClarenceD/" id="profile-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto: tripp.durham@yahoo.com" id="profile-link" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a>
+        </div>
+        <a class="top-button" href="#welcome-section">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+
+        <form id="contact-form" method="post" action="https://formsubmit.co/tripp.durham@yahoo.com">
+            <h2 id="contact-me">Contact Me</h2>
+            <input type="hidden" name="_subject" value="New Message!">
+            <div class="form-row">
+              <div class="form-group1">
+                <label for="first-name">First Name</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" required>
+              </div>
+              <div class="form-group1">
+                <label for="last-name">Last Name</label>
+                <input type="text" class="form-control" id="last-name" name="last-name">
+              </div>
+            </div>
+            <div class="form-group2">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group2">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          
+    </section>
+
+    <footer>
+        <div class="container">
+          <p>&copy; 2023 Clarence Durham</p>
+          <ul class="social-links">
+            <li><a href="Documents\Clarence Durham - Resume.pdf"><i class="fa-solid fa-file"></i></a></li>
+            <li><a href="https://github.com/Trippington"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ClarenceD/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto: tripp.durham@yahoo.com"><i class="fa-regular fa-envelope"></i></a></li>
+            
+            
+          </ul>
+        </div>
+      </footer>
+      
+  </body>
+</html>
