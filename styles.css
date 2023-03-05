@@ -1,7 +1,8 @@
 :root {
     --text-color: #3C3431;
+    --navbar-text-color: #fff;
     --tan-color: #705446;
-    --navbar-color: #bfbdba;
+    --navbar-color: #171614;
     --hover-background: #9e9c98;
     --hover-background2: #696765;
     --contact-background: #F2F2F2;
@@ -10,8 +11,9 @@
 
 .dark-mode {
     --text-color: #fff;
+    --navbar-text-color: #fff;
     --tan-color: #eee;
-    --navbar-color: #222;
+    --navbar-color: #696765;
     --hover-background: #444;
     --contact-background: #333;
     --bg-color: #222;
@@ -25,8 +27,7 @@ body {
     color: var(--text-color);
   }
 
-  
-  
+
   #navbar {
     background-color: var(--navbar-color);
     position: fixed;
@@ -43,13 +44,37 @@ body {
     display: flex;
     flex-direction: row;
   }
+
+  .left-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .left-links li {
+    margin-right: 20px;
+  }
+  
+  .right-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .right-links li {
+    margin-left: 20px;
+  }
   
   li {
     list-style: none;
   }
   
   a {
-    color: var(--text-color);
+    color: var(--navbar-text-color);
     text-decoration: none;
     font-size: 1.7em;
     padding: 1.08rem 2rem;
@@ -58,6 +83,7 @@ body {
     background-color: var(--hover-background);
     border-radius: 8px;
   }
+  
 
   /*/////////////////////////WELCOME SECTION////////////////////////*/
   
@@ -100,6 +126,9 @@ body {
   .skills-button, .contact-button, .projects-button, .top-button {
     border: 1px solid var(--text-color);
     border-radius: 10px;
+  }
+  #welcome-section a {
+    color: var(--text-color);
   }
 
 
@@ -157,6 +186,10 @@ body {
     bottom: 15%;
     right: 50%;
     transform: translateX(50%);
+  }
+
+  #skills a {
+    color: var(--text-color);
   }
 
   @media screen and (max-width: 768px) {
@@ -219,19 +252,29 @@ body {
     transform: translateX(50%);
   }
 
+  #projects a {
+    color: var(--text-color);
+  }
+
   /*/////////////////////////CONTACT SECTION////////////////////////*/
   
   #contact {
     width: 100%;
     height: 90vh;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
   }
   
   #contact-h2 {
     margin-top: 200px;
+  }
+
+  #contact a {
+    color: var(--text-color);
   }
 
   #contact-me {
@@ -332,7 +375,7 @@ body {
     width: 20%;
     height: 30px;
     font-size: 16px;
-    color: var(--text-color);
+    color: var(--navbar-text-color);
   }
   
   button[type="submit"]:hover {
@@ -354,13 +397,14 @@ body {
 
 
 /*/////////////////////////FOOTER////////////////////////*/
-  footer {
+footer {
     background-color: var(--navbar-color);
-    color: var(--text-color);
+    color: var(--navbar-text-color);
     padding: 10px;
     text-align: center;
     font-size: 16px;
   }
+
   
   .container {
     display: flex;
