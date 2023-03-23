@@ -92,9 +92,9 @@ nightModeLink.addEventListener('click', (event) => {
   event.preventDefault();
   document.body.classList.toggle('dark-mode');
   if (document.body.classList.contains('dark-mode')) {
-    nightModeLink.innerHTML = '<i class="fa-regular fa-sun"></i> Light';
+    nightModeLink.innerHTML = '<i class="fa-regular fa-sun"></i>';
   } else {
-    nightModeLink.innerHTML = '<i class="fa-regular fa-moon"></i> Dark';
+    nightModeLink.innerHTML = '<i class="fa-regular fa-moon"></i>';
   }
 });
 
