@@ -42,11 +42,6 @@ projectsBtn.addEventListener('click', (event) => {
   const projectsSection = document.querySelector('#projects');
   projectsSection.scrollIntoView({ behavior: 'smooth' });
 });
-contactBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  const contactSection = document.querySelector('#contact');
-  contactSection.scrollIntoView({ behavior: 'smooth' });
-});
 topBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const topSection = document.querySelector('#welcome-section');

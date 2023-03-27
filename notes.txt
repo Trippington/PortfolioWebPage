@@ -4,4 +4,3 @@ fix resizing for small screens and molile devices
 
 replace project images with iframes that link to actual projects.
 
-fix contact form so that it sends me an email.
