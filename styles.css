@@ -171,6 +171,9 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 20%;
+  max-width: 1200px; /* set a maximum width for the element */
+  overflow: auto; /* enable scrolling when the content exceeds the element's size */
+  margin-bottom: 100px; /* add a margin at the bottom */
 }
 
 .skills-header {
@@ -468,6 +471,7 @@ body {
     form {
       max-width: 500px;
     }
+    
   }
 
 
@@ -478,6 +482,8 @@ footer {
     padding: 10px;
     text-align: center;
     font-size: 16px;
+    width: 100%;
+
   }
 
   
@@ -508,26 +514,8 @@ footer {
 
 
 
-
-
-
   @media screen and (max-width: 768px) {
-    /* Styles for mobile devices */
-  
-    /* Adjust font sizes */
-    body {
-      font-size: 16px;
-    }
-  
-    /* Adjust padding and margins */
-    .container {
-      padding: 20px;
-    }
-  
-    /* Hide or show elements */
-    .sidebar {
-      display: none;
-    }
+    
   
     /* Change layout */
     .grid {
@@ -541,30 +529,19 @@ footer {
       height: auto;
     }
   
-    /* Adjust navigation menu */
-    .nav-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      z-index: 999;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    .nav-menu.active {
-      transform: translateX(0%);
-    }
-  
     /* Adjust footer */
     .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .footer-columns {
+      flex-direction: column;
+    }
+    .footer-links {
       text-align: center;
-      padding: 10px;
-      font-size: 12px;
+      margin-top: 20px;
     }
   }
   
