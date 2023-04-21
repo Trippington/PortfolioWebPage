@@ -1,0 +1,175 @@
+<html>
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>  
+<!-- <meta http-equiv="refresh" content="14400"/> see frame parent for refresh -->
+
+<script>
+  
+
+let myCoolCode = document.createElement("script");
+myCoolCode.setAttribute("type", "text/javascript");
+myCoolCode.setAttribute("src", "C:/Users/Tripp/scrumPoker/x_planning_base.js?212413182");
+let head = document.head;
+head.insertBefore(myCoolCode, head.firstElementChild);
+
+</script> 
+
+
+<!-- JS library required for MQTT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+<script   src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>  
+<body> 
+
+  <div id="root">Scrum Planning Poker App</div>
+  <br>
+
+  <script>
+
+    //print ("tabID is " + tabID);
+    logOutput("tabID is: " + tabID);
+  
+  
+  
+    //=======================================================
+    // select and share card with others
+    //=======================================================
+    function select_card(tab_id, card_value){
+      var name;
+        logOutput("output tab_id=" + tab_id + ", card_value is: " + card_value);
+        name=document.getElementById("username").value;
+        publishCardSelected(tab_id, name, card_value);
+      
+    }
+  
+    //=======================================================
+    // Send a Show Card message pushShowCards
+    //=======================================================
+    function pushShowCards(){
+      mqtt.send('scrum/showcards', 'showcards');
+    }
+    
+  
+    function publishCardSelected(tab_id, name, card_value){
+      try {
+        myLogger(1, "about to publishCardSelected... in function", "publishCardSelected()");
+        myLogger(25, 'tabID:' + tabID + ',name:'+name+',card_value:' + card_value, "publishCardSelected()");
+  
+        mqtt.send('scrum/cardselect', '{\"tabID\":\"' + tabID + '\",\"name\":\"'+name+'\",\"card_value\":' + card_value + ',\"voted\":' + 1 + '}');
+  
+      } catch (err) {
+        console.log("mqtt error" + err);
+      }
+    }
+  
+    function publishNewUser(){
+      name=document.getElementById("username").value;
+      try {
+        myLogger(1, "about to publishCardSelected... in function", "publishNewUser()");
+        myLogger(25, 'tabID:' + tabID + ',name:'+name, "publishNewUser()");
+  
+        mqtt.send('scrum/newuser', '{\"tabID\":\"' + tabID + '\",\"name\":\"'+name+'\",\"card_value\":' + 0 + ',\"voted\":' + 0 + '}');
+  
+      } catch (err) {
+        console.log("mqtt error" + err);
+      }
+    }
+    
+    function logOutput(message){
+      console.log(message);
+    }
+    function getWeather(){
+    }
+    function be_user(user_num){
+      document.getElementById("username").style.display = "none";
+  
+      document.getElementById("username").style.display = "";
+  
+    }
+    function showa_user1(){
+      //document.getElementById("user1name").style.display = "show";
+      document.getElementById("user1name").style.display = "relative";
+      //document.getElementById("user1name").style.display = "none";
+    }
+    function showb_user1(){
+      //document.getElementById("user1name").style.display = "relative";
+      document.getElementById("user1name").style.display = "none";
+    }
+    function showc_user1(){
+      //document.getElementById("user1name").style.display = "relative";
+      document.getElementById("user1name").style.display = "";
+    }
+  </script>
+
+Name: <div id="assigned_name1" style="display: inline-block;"></div><input type="text" id="username" name="username" onfocusout="publishNewUser();">
+<!-- <input type="text" id="username" name="username" style="display:none;"> -->
+<br><br>
+
+
+
+<label for="countRadio">Increment of 1:</label>
+<input type="radio" id="countRadio" name="cardValue" value="count" checked>
+
+
+
+
+<label for="fibRadio">Fibonacci:</label>
+<input type="radio" id="fibRadio" name="cardValue" value="fib">
+
+
+
+<br>
+<br>
+
+
+
+<label for="numCardsInput">Number of Cards:</label>
+<select id="numCardsInput">
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10" selected>10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+</select>
+
+<button id="generateCards" onclick="addCards();">Generate Cards</button>
+
+
+<div id="cards"></div>
+
+
+
+<hr>
+<div id="showcard" onclick="pushShowCards();">Show Cards</div>
+<div id="showcard" onclick="pushClearCards();">Clear votes</div>
+<br>
+<div id="results"></div>
+
+<div id="users"></div>
+
+
+
+
+<script>MQTTconnect();</script>
+
+
+
+
+</body>
+</html>
