@@ -94,3 +94,19 @@ nightModeLink.addEventListener('click', (event) => {
 });
 
 
+
+//===========================jQuery=============================//
+$(document).ready(function() {
+  // Slide in navbar items from right to left
+  $('#navbar').hide().fadeIn(1000);
+  $('#nav-list-r').hide().delay(1000).animate({width: 'toggle'}, 500);
+});
+
+$(document).ready(function() {
+  // Slide up the H1 text in the welcome section
+  $('.welcome #flicker').hide().slideDown(1000);
+});
+
+
+
+

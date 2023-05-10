@@ -395,7 +395,7 @@ body {
 
   .flicker {
     opacity: 0.5;
-    animation: flickerAnimation 0.3s alternate infinite;
+    animation: flickerAnimation 0.5s alternate infinite;
   }
 
   @keyframes flickerAnimation {
