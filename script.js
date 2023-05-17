@@ -99,22 +99,47 @@ nightModeLink.addEventListener('click', (event) => {
 $(document).ready(function() {
   // Slide in navbar items from right to left
   $('#navbar').hide().fadeIn(1000);
-  $('#nav-list-r').hide().delay(1000).animate({width: 'toggle'}, 500);
+  $('#nav-list-r').hide();
+  
+  $('#nav-list-l li').each(function(index) {
+    $(this).hide().delay(500 * index).animate({ marginLeft: 'toggle' }, 500);
+  });
+  
+  $('#nav-list-r').delay(500 * ($('#nav-list-l li').length + 1)).animate({ width: 'toggle' }, 500);
 });
+
+
 
 $(document).ready(function() {
-  // Slide up the H1 text in the welcome section
-  $('.welcome #flicker').hide().slideDown(1000);
+  // Function to check if an element is in the viewport
+  function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle scroll event
+  function handleScroll() {
+    $('.animate-heading').each(function() {
+      if (isElementInViewport(this)) {
+        $(this).addClass('animate-show');
+      } else {
+        $(this).removeClass('animate-show');
+      }
+    });
+  }
+
+  // Trigger the handleScroll function on page load
+  handleScroll();
+
+  // Trigger the handleScroll function on scroll
+  $(window).on('scroll', handleScroll);
 });
 
-
-
-
-
-function toggleMenu() {
-  var navbar = document.getElementById("navbar");
-  navbar.classList.toggle("active");
-}
 
 
 
