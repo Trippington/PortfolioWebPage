@@ -1,6 +1,0 @@
-Things that need to be fixed/changed before deployment:
-
-fix resizing for small screens and molile devices
-
-replace project images with iframes that link to actual projects.
-

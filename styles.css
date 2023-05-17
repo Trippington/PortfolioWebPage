@@ -307,9 +307,9 @@ body {
   
   .project-buttons {
     display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  margin-top: 1rem;
-  gap: 0px;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 1rem;
+    gap: 0px;
   }
   
   .project-button {
@@ -355,10 +355,6 @@ body {
   @media (max-width: 768px) {
     h2 {
       font-size: 2.5rem;
-    }
-    iframe {
-      width: 700px;
-      height: 300px;
     }
     .project-image {
       width: 700px;
