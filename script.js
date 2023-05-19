@@ -140,6 +140,40 @@ $(document).ready(function() {
   $(window).on('scroll', handleScroll);
 });
 
+$(document).ready(function() {
+  // Function to check if an element is in the viewport
+  function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to animate the projects
+  function animateProjects() {
+    // Select the project items
+    var projectItems = $('.project-item');
+
+    // Loop through each project item
+    projectItems.each(function() {
+      if (isElementInViewport(this)) {
+        $(this).addClass('project-animate');
+      } else {
+        $(this).removeClass('project-animate');
+      }
+    });
+  }
+
+  // Call the animateProjects function on scroll
+  $(window).on('scroll', animateProjects);
+
+  // Call the animateProjects function initially to check for visible projects
+  animateProjects();
+});
+
 
 
 

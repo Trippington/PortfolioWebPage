@@ -408,6 +408,59 @@ body {
     }
   }
 
+  .project-item {
+    opacity: 0; /* Initially hide the project items */
+    transition: opacity 1.0s;
+  }
+  
+  .project-animate {
+    opacity: 1; /* Show the project items when in view */
+  }
+  
+  .project-animate.slide-from-left {
+    transform: translateX(-100%);
+  }
+  
+  .project-animate.slide-from-right {
+    transform: translateX(100%);
+  }
+  
+  @keyframes slide-in-from-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-from-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-out-to-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slide-out-to-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
   /*/////////////////////////CONTACT SECTION////////////////////////*/
   
   #contact {
