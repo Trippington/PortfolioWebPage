@@ -48,36 +48,6 @@ topBtn.addEventListener('click', (event) => {
   topSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-//--------------------------Flicker welcome text animation-----------------------------//
-const heading = document.querySelector('#my-intro');
-function getRandomLetter(string) {
-  return string.charAt(Math.floor(Math.random() * string.length));
-}
-const flicker = document.querySelector('#flicker');
-  const text = flicker.textContent;
-  const letters = text.split('');
-  flicker.textContent = '';
-
-  letters.forEach((letter) => {
-    const span = document.createElement('span');
-    span.textContent = letter;
-    flicker.appendChild(span);
-  });
-
-  function flickerText() {
-    const spans = flicker.querySelectorAll('span');
-    const randomIndex = Math.floor(Math.random() * spans.length);
-    const randomSpan = spans[randomIndex];
-
-    randomSpan.classList.toggle('flicker');
-
-    setTimeout(() => {
-      randomSpan.classList.toggle('flicker');
-    }, Math.random() * 1000 + 500);
-  }
-
-  setInterval(flickerText, 1100);
-
 
 
 //------------------------------dark/light mode---------------------------//
