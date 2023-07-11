@@ -139,42 +139,49 @@
     <section id="contact" class="contact">
       <div id="contact-header">
         <h2 id="contact-h2">Let's Work Together...</h2>
-        <p id="contact-p">“Always remember that the future comes one day at a time.” -Dean Acheson</p>
-      </div>
+        </div>
+
+        <div id="quote-container">
+        <p id="contact-p">“In the middle of every difficulty lies opportunity.” - Albert Einstein</p>
+        </div>
+        <div id="timer" class="chart"></div>
+  </div>
       <div class="contact-links">
         <a href="Documents\Clarence Durham - Resume.pdf" id="profile-link" target="_blank"><i class="fa-solid fa-file"></i> Resume</a>
         <a href="https://github.com/Trippington" id="profile-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="https://www.linkedin.com/in/ClarenceD/" id="profile-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         <a href="mailto: tripp.durham@yahoo.com" id="profile-link" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a>
         </div>
-        <div class="button-container">
 
-        <a class="top-button" href="#welcome-section">Back to top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
+        
 
         <form id="contact-form" action="https://formspree.io/f/mdovldyw" method="post">
-            <h2 id="contact-me">Contact Me</h2>
-            <input type="hidden" name="_subject" value="New Message!">
-            <div class="form-row">
-              <div class="form-group1">
-                <label for="first-name">First Name</label>
-                <input type="text" class="form-control" id="first-name" name="first-name" required>
-              </div>
-              <div class="form-group1">
-                <label for="last-name">Last Name</label>
-                <input type="text" class="form-control" id="last-name" name="last-name">
-              </div>
+          <h2 id="contact-me">Contact Me</h2>
+          <input type="hidden" name="_subject" value="New Message!">
+          <div class="form-row">
+            <div class="form-group1">
+              <label for="first-name">First Name</label>
+              <input type="text" class="form-control slide-from-right" id="first-name" name="first-name" required>
             </div>
-            <div class="form-group2">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+            <div class="form-group1">
+              <label for="last-name">Last Name</label>
+              <input type="text" class="form-control slide-from-right" id="last-name" name="last-name">
             </div>
-            <div class="form-group2">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </div>
+          <div class="form-group2">
+            <label for="email">Email</label>
+            <input type="email" class="form-control slide-from-right" id="email" name="email" required>
+          </div>
+          <div class="form-group2">
+            <label for="message">Message</label>
+            <textarea class="form-control slide-from-right" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="button-container">
+        <a class="top-button" href="#welcome-section">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
           
     </section>
 
