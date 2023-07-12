@@ -253,3 +253,44 @@ $(document).ready(function() {
   animateFormFields();
 });
 
+
+//==========================Make the arrows rotate 90 degrees===================//
+
+$(document).ready(function() {
+  var skillsButton = $('.skills-button');
+  var projectsButton = $('.projects-button');
+
+
+  skillsButton.hover(
+    function() {
+      $(this).find('i')
+        .css({
+          'transform': 'rotate(90deg)',
+          'transition': 'transform 0.3s ease'
+        });
+    },
+    function() {
+      $(this).find('i')
+        .css({
+          'transform': 'rotate(0deg)',
+          'transition': 'transform 0.3s ease'
+        });
+    }
+  );
+  projectsButton.hover(
+    function() {
+      $(this).find('i')
+        .css({
+          'transform': 'rotate(90deg)',
+          'transition': 'transform 0.3s ease'
+        });
+    },
+    function() {
+      $(this).find('i')
+        .css({
+          'transform': 'rotate(0deg)',
+          'transition': 'transform 0.3s ease'
+        });
+    }
+  );
+});

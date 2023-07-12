@@ -6,7 +6,15 @@
     --hover-background: #9e9c98;
     --hover-background2: #696765;
     --contact-background: #F2F2F2;
-    
+    --background-color1: #D1CCC9;
+    --background-color2: #8C857F;
+    --background-color3: #635C57;
+    --background-color4: #47423E;
+    --background-color5: #312D29;
+    --background-color6: #1B1816;
+    --background-color7: #130F0D;
+    --background-color8: #0C0A09;
+
 }
 
 .dark-mode {
@@ -174,14 +182,14 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 20%;
-  overflow: visible; /* enable scrolling when the content exceeds the element's size */
-  margin-bottom: 100px; /* add a margin at the bottom */
+  overflow: visible;
+  margin-bottom: 100px;
 }
-
+ 
 .skills-header {
   width: 80%;
   text-align: center;
