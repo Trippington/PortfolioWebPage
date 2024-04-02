@@ -1,135 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="https://kit.fontawesome.com/808397f9f6.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="images\favicon.ico">
-    <link rel="stylesheet" href="blog.css"/>
-    <script src="blogscript.js" defer></script>
-    <title>Tripp Durham Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="blog.css">
+  
+  <title>Tripp Durham Blog</title>
 </head>
 <body>
-    <nav id="navbar">
-      <div class="right-links">
-        <ul id="nav-list-r">
-          <li><a href="index.html#welcome-section">About</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#projects">Work</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="left-links">
-        <ul id="nav-list-l">
-          <li><a href="#" class="dark-light" id="night-mode"><i class="fa-regular fa-moon"></i></a></li>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Tripp Durham's Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
       </div>
     </nav>
+  </header>
 
-    <section id="welcome-section" class="welcome">
-      <h1 id="flicker">Hello, welcome to my blog.</h1>
-      
-       
+  <main class="container">
+    <section class="blog-list">
+      <h2>Recent Blog Topics</h2>
+      <ul id="blogTopics"></ul>
     </section>
+  </main>
 
-    <section id="blog">
-        <h1>Blog Entries</h1>
-        <ul>
-          <li>
-            <div class="blog-post">
-            <h2 class="blog-title">Debugging</h2>
-            <p class="date">Posted on April 1, 2023</p>
-            <p class="preview">Debugging code is an essential part of the software development...</p>
-            <div class="full-post">
-              <p>Debugging code is an essential part of the software development process. It involves identifying and fixing errors or bugs in code to ensure that it functions correctly. Debugging can be a challenging and time-consuming process, but it's also a crucial step towards delivering a high-quality product.</p>
-              <p>The following are some tips to help you improve your code debugging process:</p>
-              <ol>
-                <li>Understand the problem: Before you start debugging, make sure you understand the problem. Reproduce the error, examine the inputs and outputs, and try to isolate the issue to a specific part of the code.</li>
-                <li>Use debugging tools: There are several debugging tools available, including IDEs, debuggers, and profilers. These tools can help you identify issues, set breakpoints, and step through code to see how it executes.</li>
-                <li>Use print statements: Sometimes the easiest way to debug code is to add print statements. By printing out the values of variables or the output of functions, you can see what's going on at various points in the code.</li>
-                <li>Break the problem down: If you're dealing with a complex issue, try breaking it down into smaller pieces. This can make it easier to isolate the problem and identify the source of the error.</li>
-                <li>Consult documentation: If you're unsure about how a particular function or method works, consult the documentation. Understanding the purpose and behavior of a function can help you identify errors and potential issues.</li>
-                <li>Take breaks: Debugging can be frustrating and time-consuming, so it's important to take breaks when you need them. Stepping away from the code for a few minutes or hours can help you come back with a fresh perspective.</li>
-              </ol>
-              <p>In conclusion, debugging is an essential part of software development. By following these tips, you can make the process less daunting and more effective. Remember to approach the problem systematically, use the tools available to you, and take breaks when you need them. With persistence and patience, you can overcome even the most challenging coding issues.</p>
-            </div>
-            </div>
-          </li>
-          <li>
-            <div class="blog-post">
-            <h2 class="blog-title">Learning Functions in JavaScript</h2>
-            <p class="date">Posted on March 27, 2023</p>
-            <p class="preview">JavaScript functions are reusable blocks of code that can be called...</p>
-            <div class="full-post">
-              <p>JavaScript functions are reusable blocks of code that can be called upon to perform a specific task. They are a fundamental part of the language and are used extensively in building web applications.</p>
-              <p>To create a function in JavaScript, you use the function keyword followed by the name of the function and a set of parentheses. Inside the parentheses, you can include any parameters that the function needs to take in. These parameters act as variables that can be used within the function.</p>
-              <p>Functions in JavaScript can also be assigned to variables, passed as arguments to other functions, and even returned as values from other functions. This allows for a great deal of flexibility in how functions can be used.</p>
-              <p>In addition to the basic function syntax, JavaScript also includes arrow functions, which are a shorter and more concise way to write functions. Here's the same addNumbers function written as an arrow function:</p>
-              <p>Functions are a powerful tool in JavaScript that allow you to write reusable and modular code. By mastering functions, you'll be well on your way to becoming a proficient JavaScript developer.</p>
-            </div>
-            </div>
-          </li>
-          <!-- Add more blog entries here -->
-        </ul>
-      </section>
-      
-
-
-
-    <section id="contact" class="contact">
-      <div id="contact-header">
-        <h2 id="contact-h2">Let's Work Together...</h2>
-        <p id="contact-p">“Always remember that the future comes one day at a time.” -Dean Acheson</p>
-      </div>
-      <div class="contact-links">
-        <a href="Documents\Clarence Durham - Resume.pdf" id="profile-link" target="_blank"><i class="fa-solid fa-file"></i> Resume</a>
-        <a href="https://github.com/Trippington" id="profile-link" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/ClarenceD/" id="profile-link" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="mailto: tripp.durham@yahoo.com" id="profile-link" target="_blank"><i class="fa-regular fa-envelope"></i> Email</a>
-        </div>
-        <div class="button-container">
-
-        <a class="top-button" href="#welcome-section">Back to top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-
-        <form id="contact-form" action="https://formspree.io/f/mdovldyw" method="post">
-            <h2 id="contact-me">Contact Me</h2>
-            <input type="hidden" name="_subject" value="New Message!">
-            <div class="form-row">
-              <div class="form-group1">
-                <label for="first-name">First Name</label>
-                <input type="text" class="form-control" id="first-name" name="first-name" required>
-              </div>
-              <div class="form-group1">
-                <label for="last-name">Last Name</label>
-                <input type="text" class="form-control" id="last-name" name="last-name">
-              </div>
-            </div>
-            <div class="form-group2">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group2">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          
-    </section>
-
-    <footer id="footer">
-        <div class="container">
-          <p>&copy; 2023 Clarence Durham</p>
-          <ul class="social-links">
-            <li><a href="Documents\Clarence Durham - Resume.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
-            <li><a href="https://github.com/Trippington" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/ClarenceD/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="mailto: tripp.durham@yahoo.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-          </ul>
-        </div>
-      </footer>
-      
-  </body>
+  <footer class="footer bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Tripp Durham Blog</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="blogscript.js"></script>
+</body>
 </html>
+
